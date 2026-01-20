@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Важно для мобильного вида -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO Блок: Буздяк 21 и вариации -->
+    <title>Буздяк21 - Магазины Буздяк 21 | Доставка и товары</title>
+    <meta name="description" content="Буздяк21 - список лучших магазинов. Буздяк 21 онлайн, доставка продуктов в Буздяк21. Ваш гид по покупкам Буздяк 21.">
+    <meta name="keywords" content="Буздяк21, Буздяк 21, Buzdyak21, магазины Буздяк, продукты 21, доставка Буздяк21">
+    
+    <!-- Подключение иконок (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2ecc71; /* Зеленый цвет бренда */
+            --dark-color: #2c3e50;
+            --light-gray: #f5f6fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-color);
+            padding-bottom: 70px; /* Отступ под нижнее меню */
+        }
+
+        /* Шапка приложения */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Контейнер для табов */
+        .tab-content {
+            display: none; /* Скрываем все табы по умолчанию */
+            padding: 15px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block; /* Показываем активный */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Карточка магазина */
+        .store-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .store-image {
+            width: 100%;
+            height: 160px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 3rem;
+            /* Вставьте реальное фото сюда в style="background-image..." */
+        }
+
+        .store-info {
+            padding: 15px;
+        }
+
+        .store-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .store-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Нижняя навигация */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #95a5a6;
+            font-size: 0.8rem;
+            flex: 1;
+        }
+
+        .nav-item i {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        /* SEO текст (визуально аккуратный, но насыщенный ключами) */
+        .seo-footer {
+            font-size: 0.75rem;
+            color: #bdc3c7;
+            margin-top: 30px;
+            text-align: justify;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Верхняя шапка -->
+    <header>
+        <h1>Буздяк21 App</h1>
+    </header>
+
+    <!-- ТАБ 1: Список магазинов (Главная) -->
+    <div id="tab-home" class="tab-content active">
+        
+        <!-- Заголовок раздела с ключом -->
+        <h2 style="margin-bottom: 15px; font-size: 1.1rem;">Лучшее в Буздяк 21</h2>
+
+        <!-- Карточка магазина -->
+        <div class="store-card">
+            <div class="store-image">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="store-info">
+                <div class="store-title">Супермаркет "Буздяк21 Центральный"</div>
+                <p class="store-desc">
+                    Главный магазин района. Свежие продукты в <strong>Буздяк 21</strong>. 
+                    Широкий ассортимент товаров. Мы работаем для жителей Буздяк21 ежедневно.
+                </p>
+                <button class="btn" onclick="alert('Переход в магазин Буздяк 21...')">Открыть магазин</button>
+            </div>
+        </div>
+
+        <!-- SEO Текст внутри контента -->
+        <div class="seo-text" style="margin-top: 20px; padding: 10px; background: white; border-radius: 8px;">
+            <h3>О сервисе Буздяк21</h3>
+            <p>Добро пожаловать в официальное приложение <strong>Буздяк21</strong>. Здесь вы найдете все магазины района <em>Буздяк 21</em>. Наш сервис помогает жителям Буздяк21 находить товары рядом. Ищите "Буздяк 21"? Вы попали по адресу.</p>
+        </div>
+    </div>
+
+    <!-- ТАБ 2: Поиск (SEO заглушка) -->
+    <div id="tab-search" class="tab-content">
+        <h2>Поиск по Буздяк 21</h2>
+        <div style="margin-top: 20px;">
+            <input type="text" placeholder="Найти в Буздяк21..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+        </div>
+        <p style="margin-top: 15px; color: #666;">
+            Популярные запросы: Магазин Буздяк21, Доставка Буздяк 21, Продукты Буздяк21.
+        </p>
+    </div>
+
+    <!-- ТАБ 3: Профиль -->
+    <div id="tab-profile" class="tab-content">
+        <h2>Мой Буздяк21</h2>
+        <div class="store-card" style="margin-top: 15px;">
+            <div class="store-info">
+                <p>Войдите, чтобы получать скидки в магазинах <strong>Буздяк 21</strong>.</p>
+                <br>
+                <button class="btn" style="background-color: #34495e;">Войти</button>
+            </div>
+        </div>
+        
+        <!-- Агрессивный SEO блок внизу (скрыт от глаз, но виден роботу, или просто в футере) -->
+        <div class="seo-footer">
+            <p>Буздяк21 официальный сайт. Буздяк 21 новости. Магазины Буздяк21 каталог. Погода Буздяк 21. Работа Буздяк21. Объявления Буздяк 21. Такси Буздяк21. Администрация Буздяк 21. Индекс Буздяк21. Школа Буздяк 21. Больница Буздяк21. Карта Буздяк 21. Автобус Буздяк21. Расписание Буздяк 21.</p>
+        </div>
+    </div>
+
+    <!-- Нижнее меню навигации -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item active" onclick="switchTab('home', this)">
+            <i class="fas fa-home"></i>
+            <span>Буздяк21</span>
+        </a>
+        <a href="#search" class="nav-item" onclick="switchTab('search', this)">
+            <i class="fas fa-search"></i>
+            <span>Поиск</span>
+        </a>
+        <a href="#profile" class="nav-item" onclick="switchTab('profile', this)">
+            <i class="fas fa-user"></i>
+            <span>Профиль</span>
+        </a>
+    </nav>
+
+    <script>
+        // Логика переключения табов
+        function switchTab(tabId, element) {
+            // 1. Убираем класс active у всех кнопок меню
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // 2. Скрываем все содержимое табов
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // 3. Добавляем active нажатой кнопке
+            element.classList.add('active');
+
+            // 4. Показываем нужный контент
+            document.getElementById('tab-' + tabId).classList.add('active');
+            
+            // 5. Меняем заголовок (для красоты)
+            const titles = {
+                'home': 'Магазины Буздяк21',
+                'search': 'Поиск Буздяк 21',
+                'profile': 'Кабинет Буздяк21'
+            };
+            document.querySelector('header h1').innerText = titles[tabId];
+        }
+    </script>
+</body>
+</html>
